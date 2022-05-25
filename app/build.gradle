@@ -1,14 +1,16 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'    // 添加本行
+group='com.github.haveagoodtimef'
 
 android {
-    compileSdk 31
+
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
 
     defaultConfig {
+        minSdkVersion 24
         applicationId "com.fhz.utilsfhz"
-        minSdk 24
-        targetSdk 31
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -21,6 +23,8 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
